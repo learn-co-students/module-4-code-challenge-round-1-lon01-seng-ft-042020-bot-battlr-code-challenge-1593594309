@@ -12,7 +12,7 @@ class BotsPage extends React.Component {
     this.state = {
       botList: [],
       botArmy: [],
-      selectedBot: null
+      
     }
     this.handleFetch()
   }
