@@ -1,6 +1,9 @@
 import React from "react";
 
 const BotCard = props => {
+
+  let propFunction = props.updateBotArmy ? props.updateBotArmy : props.removeBotFromArmy
+
   const { bot } = props;
 
   let botType;
@@ -19,12 +22,13 @@ const BotCard = props => {
       botType = <div />;
   }
 
+
   return (
     <div className="ui column">
       <div
         className="ui card"
         key={bot.id}
-        onClick={() => console.log("add code to connect event listener")}
+        onClick={(e) => propFunction(bot)}
       >
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
@@ -57,6 +61,8 @@ const BotCard = props => {
     </div>
   );
 
+
 };
 
 export default BotCard;
+
