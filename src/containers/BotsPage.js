@@ -18,7 +18,7 @@ class BotsPage extends React.Component {
   }
 // fetch done  (practise componentDidMount lol)
   handleFetch= () => {
-    fetch(`asdsdaasd`)
+    fetch(`https://bot-battler-api.herokuapp.com/api/v1/bots`)
     .then(resp => resp.json())
     .then(resp => this.setState({
       botList: resp
